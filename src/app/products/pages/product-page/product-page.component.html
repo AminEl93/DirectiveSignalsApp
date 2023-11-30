@@ -1,0 +1,31 @@
+<h3 class="mt-3">Agregar información del producto</h3>
+
+<hr>
+
+<form [formGroup]="colorForm">    
+    <div class="row g-3 align-items-center mb-3">
+        <div class="col-auto">
+            <label>Email</label>
+        </div>
+
+        <div class="col-auto">
+            <input class="form-control" formControlName="name" type="text">
+        </div>
+
+        <div class="col-auto">
+            <span class="fw-bold">Resultado</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" (click)="changeColor()">Cambiar el color</button>
+        </div>
+    </div>
+</form>
+
+<div class="fw-bold">
+    <pre class="mt-5">{{ colorForm.get('name')?.errors | json }}</pre>
+    <p>Color = {{ color }}</p>
+</div>
+
