@@ -14,7 +14,14 @@
 
         <div class="col-auto">
             <!-- Se añade la directiva personalizada "customLabel" -->
-            <span class="fw-bold" customLabel [color]="color">Resultado del color</span>
+            <span
+                class="fw-bold"
+                customLabel
+                [color]="color"
+                [errors]="colorForm.get('name')?.errors"
+            >
+                Resultado del color
+            </span>
         </div>
     </div>
 
