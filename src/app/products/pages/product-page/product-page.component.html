@@ -13,7 +13,8 @@
         </div>
 
         <div class="col-auto">
-            <span class="fw-bold">Resultado</span>
+            <!-- Se añade la directiva personalizada "customLabel" -->
+            <span class="fw-bold" customLabel [color]="color">Resultado del color</span>
         </div>
     </div>
 
@@ -24,8 +25,9 @@
     </div>
 </form>
 
-<div class="fw-bold">
-    <pre class="mt-5">{{ colorForm.get('name')?.errors | json }}</pre>
-    <p>Color = {{ color }}</p>
+<div>
+    <p class="mt-5">Color establecido = <strong>{{ color }}</strong></p>
+    <span class="fw-bold">ERRORES</span>
+    <pre class="mt-2">{{ colorForm.get('name')?.errors | json }}</pre>   
 </div>
 
