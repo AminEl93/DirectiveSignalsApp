@@ -12,9 +12,20 @@ interface MenuItem {
 })
 
 export class SideMenuComponent {
+    
+    // Menú creado con una señal
     public menuItems = signal<MenuItem[]>([
         { title: 'Contador', route: 'counter' },
         { title: 'Usuario', route: 'user-info' },
         { title: 'Mutaciones', route: 'properties' }
     ]);
+
+    // Menú creado con la manera tradicional
+    /*
+    public menuItems: MenuItem[] = [
+        { title: 'Contador', route: 'counter' },
+        { title: 'Usuario', route: 'user-info' },
+        { title: 'Mutaciones', route: 'properties' }
+    ];
+    */    
 }
