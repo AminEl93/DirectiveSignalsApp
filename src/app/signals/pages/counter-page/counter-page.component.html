@@ -1,1 +1,17 @@
-<p>counter-page works!</p>
+<h4>
+    Contador = <b>{{ counter() }}</b>
+</h4>
+
+<hr class="w-75">
+
+<!-- Contador de los cuadrados -->
+<h5>
+    Contador de cuadrados &#10132; <b>{{ counter() }}</b> <sup>2</sup> = <b>{{ squareCounter() }}</b>
+</h5>
+
+<div class="d-flex gap-3 mt-3">
+    <button class="btn btn-primary" (click)="increaseBy(+1)">+ 1</button>
+    <button class="btn btn-primary" (click)="increaseBy(-1)">- 1</button>
+    <button class="btn btn-primary" (click)="counter.set(0)">Reset</button>
+</div>
+
