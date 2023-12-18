@@ -35,7 +35,11 @@
   
     <div class="col-6 fw-bold">
         <!-- Datos del usuario -->
-        <pre>{{ user() | json }}</pre>
-        <button class="btn btn-primary" (click)="increaseBy(+1)">+ 1 en Consola</button>    
+        <pre>{{ user() | json }}</pre>        
     </div>
+</div>
+
+<div class="mt-4 fw-bold">
+    <p>{{ fullName() }} = {{ counter() }}</p>
+    <button class="btn btn-primary" (click)="increaseBy(+1)">+ 1 del ID</button>
 </div>
