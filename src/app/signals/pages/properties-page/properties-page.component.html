@@ -33,9 +33,9 @@
         >
     </div>
   
-    <div class="col-6">
+    <div class="col-6 fw-bold">
         <!-- Datos del usuario -->
-        <pre>{{ user() | json }}</pre>  
-        <button class="btn btn-primary">+ 1</button>
+        <pre>{{ user() | json }}</pre>
+        <button class="btn btn-primary" (click)="increaseBy(+1)">+ 1 en Consola</button>    
     </div>
 </div>
